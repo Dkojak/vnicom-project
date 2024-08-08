@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Business</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>New Business</h2>
+        <form id="business-form">
+            <div class="input-field">
+                <label for="name">Name of Business:</label>
+                <input type="text" id="name" name="name" placeholder="Name of Business">
+            </div>
+            <div class="input-field">
+                <label for="type">Business Type:</label>
+                <select id="type" name="type">
+                    <option value="farming">Farming</option>
+                    <option value="education">Education</option>
+                    <option value="music">Music</option>
+                    <!-- Add more options here -->
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="country">Country of Location:</label>
+                <select id="country" name="country">
+                    <option value="nigeria">Nigeria</option>
+                    <!-- Add more countries here -->
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="state">State:</label>
+                <select id="state" name="state">
+                    <!-- Add states dynamically based on selected country -->
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date">
+            </div>
+            <div class="input-field">
+                <label for="associates">Associated Businesses:</label>
+                <input type="text" id="associates" name="associates" placeholder="Associated Businesses (optional)">
+            </div>
+            <div class="input-field">
+                <label for="about">About the Business:</label>
+                <textarea id="about" name="about" placeholder="Business Description"></textarea>
+            </div>
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    <script src="dash.js"></script>
+</body>
+</html>

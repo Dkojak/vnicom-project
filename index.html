@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar" id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">☰</button>
+            <div class="sidebar-content">
+                <div id="greeting" class="greeting"></div>
+                <div class="profile-picture" onclick="uploadProfilePicture()">
+                    <img id="profileImage" src="default-profile.png" alt="Profile Picture">
+                </div>
+                <a href="#Home" onclick="showContent('home')">Home</a>
+                <a href="#profile" onclick="showContent('profile')">Profile</a>
+                <a href="#business-plans" onclick="showContent('business-plans')">Business Plans</a>
+                <a href="#settings" onclick="showContent('settings')">Settings</a>
+                <a href="#about-us" onclick="showContent('about-us')">About Us</a>
+            </div>
+        </div>
+        <div class="main-content" id="main-content">
+            <button class="open-btn" onclick="toggleSidebar()">☰</button>
+            <div class="content" id="contentDisplay">
+                <h2>Welcome to Your Dashboard</h2>
+                <p>This is a simple dashboard page.</p>
+            </div>
+            <div class="business-plans-container">
+                <button onclick="showCreateBusinessForm()">Create Business</button>
+                <div id="business-cards-container"></div>
+            </div>
+        </div>
+    </div>
+    <div id="popup" style="display:none;">
+        <div id="popup-content">
+            <h2 id="popup-name"></h2>
+            <p id="popup-type"></p>
+            <p id="popup-location"></p>
+            <p id="popup-start-date"></p>
+            <p id="popup-associates"></p>
+            <p id="popup-about"></p>
+            <button onclick="editBusiness()">Edit</button>
+            <button onclick="deleteBusiness()">Delete</button>
+        </div>
+    </div>
+    <script src="dash.js"></script>
+</body>
+</html>

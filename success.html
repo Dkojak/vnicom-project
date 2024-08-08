@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Created</title>
+</head>
+<body>
+    <script>
+        const users = JSON.parse(localStorage.getItem('users'));
+        const latestUser = users[users.length - 1];
+        alert(`Your account has been successfully created ${latestUser.firstName}, you can login now.`);
+        window.location.href = 'login.html';
+    </script>
+</body>
+</html>
